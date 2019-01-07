@@ -38,7 +38,8 @@ class AI
       end
       if code_to_check.include?(color)
         pegs[:white] += 1
-        code_to_check.delete(color)
+        i = code_to_check.find_index(color)
+        code_to_check.delete_at(i)
       end
     end
     return pegs
